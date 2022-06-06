@@ -25,6 +25,8 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: Publish
       run: dotnet publish SimpleFeedReader/SimpleFeedReader.csproj -c Release -o website
+    - name: Display structure of downloaded files
+      run: ls -R
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.2
       with:
